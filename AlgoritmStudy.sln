@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AlgoritmStudy", "AlgoritmStudy\AlgoritmStudy.vcxproj", "{CE39CA03-9D9B-4A72-965E-595F89DCA89D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dijkstra", "Dijkstra", "{26C0D2CF-2A59-4E7D-92BB-8B67CAAD6FB4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dijkstra_01", "Dijkstra_01\Dijkstra_01.vcxproj", "{125B7382-F188-46BA-968B-E492A209E4B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -18,5 +22,16 @@ Global
 		{CE39CA03-9D9B-4A72-965E-595F89DCA89D}.Release|Win32.Build.0 = Release|Win32
 		{CE39CA03-9D9B-4A72-965E-595F89DCA89D}.Release|x64.ActiveCfg = Release|x64
 		{CE39CA03-9D9B-4A72-965E-595F89DCA89D}.Release|x64.Build.0 = Release|x64
+		{125B7382-F188-46BA-968B-E492A209E4B3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{125B7382-F188-46BA-968B-E492A209E4B3}.Debug|Win32.Build.0 = Debug|Win32
+		{125B7382-F188-46BA-968B-E492A209E4B3}.Debug|x64.ActiveCfg = Debug|x64
+		{125B7382-F188-46BA-968B-E492A209E4B3}.Debug|x64.Build.0 = Debug|x64
+		{125B7382-F188-46BA-968B-E492A209E4B3}.Release|Win32.ActiveCfg = Release|Win32
+		{125B7382-F188-46BA-968B-E492A209E4B3}.Release|Win32.Build.0 = Release|Win32
+		{125B7382-F188-46BA-968B-E492A209E4B3}.Release|x64.ActiveCfg = Release|x64
+		{125B7382-F188-46BA-968B-E492A209E4B3}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{125B7382-F188-46BA-968B-E492A209E4B3} = {26C0D2CF-2A59-4E7D-92BB-8B67CAAD6FB4}
 	EndGlobalSection
 EndGlobal

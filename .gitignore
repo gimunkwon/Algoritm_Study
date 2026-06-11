@@ -1,0 +1,8 @@
+# AI 연동 설정 (Notion DB ID 등 민감 정보 포함)
+GEMINI.md
+
+# 빌드 산출물
+x64/
+Debug/
+Release/
+*.user

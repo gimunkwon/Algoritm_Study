@@ -16,6 +16,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Delivery", "Delivery\Delive
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BJ_1753", "BJ_1753\BJ_1753.vcxproj", "{D38E2530-9E11-477D-8A7B-BD20A80EA47C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DFS", "DFS", "{644BEA32-741B-4C63-8D03-86D665116636}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32

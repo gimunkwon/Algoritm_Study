@@ -9,3 +9,6 @@ Release/
 
 #ReviewFile
 Dijkstra_01_Review/*
+
+# Notion 업로드용 MD 파일 (Gemini가 로컬에서 읽어 업로드)
+notion_docs/

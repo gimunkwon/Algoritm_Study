@@ -36,6 +36,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnSolvedReview", "UnSolvedR
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BJ_2667_Review", "BJ_2667_Review\BJ_2667_Review.vcxproj", "{E99B9391-8CCB-4153-A532-2CADE8E91F90}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bellman-Ford", "Bellman-Ford", "{7809C4C0-B81D-43F1-BE95-442A5A1C7A82}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32

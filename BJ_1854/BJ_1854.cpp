@@ -61,12 +61,11 @@ vector<vector<pil>> graph;
 
 void dijkstra()
 {
-    // TODO: dist 배열 초기화 (각 노드마다 최대힙)
     vector<priority_queue<int>> dist(n + 1);
-    dist[1].push(0);
     priority_queue<pil, vector<pil>, greater<pil>> pq;
+    dist[1].push(0);
     pq.push({0,1});
-    // TODO: 다익스트라 수행
+
     while (!pq.empty()) 
     {
         auto top = pq.top();
@@ -92,16 +91,15 @@ void dijkstra()
         }
     }
 
-    // TODO: 각 도시 k번째 최단경로 출력
     for (int i = 1; i < dist.size(); i++)
     {
-        if (dist[i] == INT_MAX)
+        if ((int)dist[i].size() < k)
         {
             cout << -1 <<"\n";
         }
         else
         {
-            cout << dist[i] << "\n";
+            cout << dist[i].top() << "\n";
         }
     }
 }

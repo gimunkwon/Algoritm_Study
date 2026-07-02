@@ -124,6 +124,34 @@ bool bellmanFord(int n, int start, vector<Edge>& edges, vector<int>& dist)
 
 ---
 
+## 간선 표현: struct vs tuple (C++17)
+
+에지 리스트를 표현할 때 위 코드처럼 `struct`를 쓸 수도 있고, 책에서처럼 `tuple`을 쓸 수도 있다. 코딩테스트 환경이 C++17이라면 `tuple` + structured binding으로 아래처럼 간결하게 쓸 수 있다.
+
+```cpp
+#include <tuple>
+
+vector<tuple<int, int, int>> edges; // {u, v, w}
+edges.push_back({1, 2, 2});
+
+// C++17 structured binding
+for (const auto& [u, v, w] : edges)
+{
+    if (dist[u] == INF) continue;
+    if (dist[v] > dist[u] + w)
+        dist[v] = dist[u] + w;
+}
+```
+
+| 방식 | 장점 | 단점 |
+|---|---|---|
+| `struct Edge { int u, v, w; }` | 필드 이름이 있어 가독성 높음, 복기 시 헷갈리지 않음 | 타입 정의 코드 필요 |
+| `tuple<int,int,int>` | 정렬(`sort`)이 필요한 알고리즘(예: 크루스칼)에서 기본 비교연산이 바로 동작 | C++17 미만에서는 `get<0>(e)` 식으로 접근해야 해서 가독성 저하 |
+
+벨만-포드는 간선을 정렬할 필요가 없으므로 `struct`가 가독성 면에서 더 적합하지만, tuple + structured binding도 C++17 환경에서는 충분히 실전적인 선택이다.
+
+---
+
 ## 코딩테스트 활용 패턴
 
 | 상황 | 알고리즘 |

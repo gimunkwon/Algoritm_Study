@@ -1,43 +1,39 @@
 #include <iostream>
 #include <vector>
+#include <tuple>
 
 using namespace std;
 
-//TODO::그래프를 에지리스트로 표현하기
-struct Edge
-{
-    int u, v, w;
-};
-
-int n,m;
-vector<Edge> edges;
+// C++17 스타일: 에지리스트를 tuple<u, v, w>로 표현
+int n, m;
+vector<tuple<int, int, int>> edges;
 
 bool bellmanFord(int start, vector<int>& dist)
 {
     dist.assign(n + 1, INT_MAX);
     dist[start] = 0;
-    
+
     for (int i = 0; i < n - 1; i++)
     {
-        for (const auto& e : edges)
+        for (const auto& [u, v, w] : edges) // structured binding (C++17)
         {
-            if (dist[e.u] == INT_MAX) continue;
-            if (dist[e.v] > dist[e.u] + e.w)
+            if (dist[u] == INT_MAX) continue;
+            if (dist[v] > dist[u] + w)
             {
-                dist[e.v] = dist[e.u] + e.w;
+                dist[v] = dist[u] + w;
             }
         }
     }
-    
-    for (const auto& e : edges)
+
+    for (const auto& [u, v, w] : edges)
     {
-        if (dist[e.u] == INT_MAX) continue;
-        if (dist[e.v] > dist[e.u] + e.w)
+        if (dist[u] == INT_MAX) continue;
+        if (dist[v] > dist[u] + w)
         {
             return true;
         }
     }
-    
+
     return false;
 }
 
